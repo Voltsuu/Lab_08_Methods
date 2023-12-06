@@ -169,4 +169,28 @@ public class InputHelper {
 
         return input;
     }
+    public static void prettyHeader(String msg) {
+        String x = " ";
+        int i = 0;
+        int a = 0;
+        int y = msg.length();
+        int z = (60-y)/2 -2 ;
+        for (i = 0; i < 60; i++) {
+            System.out.print("*");
+        }
+        System.out.print("\n");
+        for (i = 0; i < 60; i++) {
+            if (z == i) {
+                System.out.print(msg);
+            } else if (i < 3 || i > 56) {
+                System.out.print("*");
+            } else if (i < 56 - (msg.length()-2)) {
+                System.out.print(x);
+            }
+        }
+        System.out.print("\n");
+        for (i = 0; i < 60; i++) {
+            System.out.print("*");
+        }
+    }
 }
